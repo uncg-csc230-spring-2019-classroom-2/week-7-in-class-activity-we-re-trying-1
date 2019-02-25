@@ -22,17 +22,25 @@ Provide three constructors Complex(a, b), Complex(a), and Complex(). Complex() c
 Your Complex class should also implement the Cloneable interface. 
 Write a test program that prompts the user to enter two complex numbers and display the result of their addition, subtraction, multiplication, and division. Here is a sample run:
 
-<Output>
+`<Output>`
+
 Enter the first complex number: 3.5 5.5
+
 Enter the second complex number: -3.5 1
+
 (3.5 + 5.5i) + (-3.5 + 1.0i) = 0.0 + 6.5i
+
 (3.5 + 5.5i) - (-3.5 + 1.0i) = 7.0 + 4.5i
+
 (3.5 + 5.5i) * (-3.5 + 1.0i) = -17.75 + -15.75i
+
 (3.5 + 5.5i) / (-3.5 + 1.0i) = -0.5094 + -1.7i
+
 |3.5 + 5.5i| = 6.519202405202649
-<End Output>
+
+`<End Output>`
 
 
 
-Design:
-Draw the UML class diagram for the Complex class here.
+
+Items needed. A folder for the UML class diagram for the Complex class and a folder that holds the code for your program.
