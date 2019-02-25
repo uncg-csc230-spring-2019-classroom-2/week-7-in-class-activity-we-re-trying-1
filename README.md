@@ -6,7 +6,7 @@ Problem Description:
 A complex number is a number of the form  , where a and b are real numbers and i is  . The numbers a and b are known as the real part and imaginary part of the complex number, respectively. You can perform addition, subtraction, multiplication, and division for complex numbers using the following formula:
 
  
- ![Formulas](/Screenshot 2019-02-25 09.42.15.png)
+ ![Formulas](/formulas.png)
   
  
 
