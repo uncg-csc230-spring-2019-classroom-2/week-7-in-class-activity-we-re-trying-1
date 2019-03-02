@@ -1,0 +1,100 @@
+import java.util.Scanner;
+
+class Complex implements Cloneable{    
+    private double a = 0;
+    private double b = 0;
+    
+    public Complex(double a, double b){
+        this.a = a;
+        this.b = b;
+    }
+    
+    public Complex(double a){
+        this.a = a;
+        this.b = 0;
+    }
+    
+    public Complex() {
+    }
+    
+    public double getA(){
+        return a;
+    }
+    
+    public void setA(double a){
+        this.a = a;
+    }
+    
+    public double getB(){
+        return b;
+    }
+    
+    public void setB(double b){
+        this.b = b;
+    }
+    
+    @Override
+    public String toString(){
+        if(b == 0){
+            return a + "";
+        }
+        else
+            return "(" + a + " + " + b + "i" + ")";
+}
+    public String add(Complex complex2){
+         double x = getA() + complex2.getA();
+         double y = getB() + complex2.getB();
+        
+        return x + " + " + y + "i";
+    }
+    
+    public String subtract(Complex complex2){
+         double x = getA() - complex2.getA();
+         double y = getB() - complex2.getB();
+        
+        return x + " - " + y + "i";
+    }
+    
+    public String multiply(Complex complex2){
+        double x = (getA() * complex2.getA()) - (getB() * complex2.getB());
+        double y = (getA() * complex2.getB()) + (getB() * complex2.getA());
+        return x + " + " + y + "i";
+    }
+    public String divide(Complex complex2){
+        double x = ((getA() * complex2.getA()) + (getB() * complex2.getB())) / (Math.pow(complex2.getA(), 2) + Math.pow(complex2.getB(), 2));
+        double y = ((getA() * complex2.getB()) - (-getB() * complex2.getA())) / (Math.pow(complex2.getA(), 2) + Math.pow(complex2.getB(), 2));
+        
+        return x + " + " + y + "i";
+    }
+} 
+public class Week7{
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the first complex number: ");
+        double a = input.nextDouble();
+        double b = input.nextDouble();
+        
+        System.out.print("Enter the second complex number: ");
+        double a1 = input.nextDouble();
+        double b1 = input.nextDouble();
+        
+        Complex complex = new Complex(a, b); 
+        Complex complex2 = new Complex(a1, b1);
+        
+        System.out.println(complex.toString() + " + " + complex2.toString() +
+                " = " + complex.add(complex2));
+        
+        System.out.println(complex.toString() + " - " + complex2.toString() +
+                " = " + complex.subtract(complex2));
+        
+        System.out.println(complex.toString() + " * " + complex2.toString() +
+                " = " + complex.multiply(complex2));
+        
+        System.out.println(complex.toString() + " / " + complex2.toString() +
+                " = " + complex.divide(complex2));
+       
+    }
+
+}
